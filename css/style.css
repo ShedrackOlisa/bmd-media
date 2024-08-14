@@ -81,7 +81,7 @@ header a:hover{
 
 /* Showcase */
 #showcase{
-  min-height:400px;
+  min-height:550px;
   background:url('../img/bmd-img.webp') no-repeat;
   background-position: center;
   background-size: cover;
