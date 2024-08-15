@@ -615,15 +615,15 @@ ul li:hover{
     font-weight: bolder;
   }
 /* Default styles for desktop */
-/* .menu-icon {
+.menu-icon {
   display: none;
   float: right;
   top:-70px;
   display: flex;
   right:5px;
 }
- */
-/* nav ul.menu {
+
+nav ul.menu {
   list-style: none;
   padding: 0;
 }
@@ -632,12 +632,12 @@ nav ul.menu li {
   float: left;
   display: inline;
   padding: 0 20px;
-} */
+}
 
 /* Media Queries for mobile */
 
   /* Hide the menu by default */
-  nav ul.menu {
+  /* nav ul.menu {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -646,10 +646,10 @@ nav ul.menu li {
     top: 100%;
     left: 0;
     z-index: 100;
-  }
+  } */
 
   /* Show the menu icon */
-  .menu-icon {
+  /* .menu-icon {
     display: block;
     cursor: pointer;
   }
@@ -657,10 +657,10 @@ nav ul.menu li {
   .menu-icon i {
     color: #ffffff;
     font-size: 24px;
-  }
+  } */
 
   /* Display the menu when the hamburger icon is clicked */
-  nav ul.menu.show {
+  /* nav ul.menu.show {
     display: flex;
   }
 
@@ -669,7 +669,7 @@ nav ul.menu li {
     text-align: center;
   }
 }
-
+ */
 
 
 
