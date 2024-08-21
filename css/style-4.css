@@ -299,7 +299,7 @@ footer { background-color: #35424a; color: #fff; padding: 20px 0; text-align: ce
 .image-grid {
   column-count: 4; /* 4 columns for desktop */
   column-gap: 1px; /* Space between columns */
-  width: 90%;
+  width: 85%;
 margin:auto;
 overflow: hidden;
 }
