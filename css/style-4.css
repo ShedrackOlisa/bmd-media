@@ -299,9 +299,19 @@ footer { background-color: #35424a; color: #fff; padding: 20px 0; text-align: ce
 .image-grid {
   column-count: 4; /* 4 columns for desktop */
   column-gap: 1px; /* Space between columns */
+  width: 95%;
+margin:auto;
+overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .image-grid {
+  column-count: 4; /* 4 columns for desktop */
+  column-gap: 1px; /* Space between columns */
   width: 80%;
 margin:auto;
 overflow: hidden;
+}
 }
 
 .image-grid img {
