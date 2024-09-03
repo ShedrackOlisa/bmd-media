@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Transition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-slideshow">
+        <div class="background-image image1"></div>
+        <div class="background-image image2"></div>
+        <div class="background-image image3"></div>
+    </div>
+
+    <div class="mobile-images">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    
+
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.image1 { background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp'); }
+.image2 { background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp'); }
+.image3 { background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp'); }
+
+.mobile-images {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.mobile-images img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .background-slideshow {
+        display: none;
+    }
+
+    .mobile-images {
+        display: block;
+    }
+}
+
+    </style>
+    <script>
+        let currentImageIndex = 0;
+const images = document.querySelectorAll('.background-image');
+
+function showNextImage() {
+    images[currentImageIndex].style.opacity = 0;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.opacity = 1;
+}
+
+setInterval(showNextImage, 5000);
+
+    </script>
+</body>
+</html>
