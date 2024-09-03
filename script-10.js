@@ -74,14 +74,17 @@ function closeLightbox() {
 
 
 
+
+
+
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks');
+const body = document.body;
 
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    body.classList.toggle('active-menu');
 });
-
-
 
 
 
