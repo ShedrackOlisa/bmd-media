@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background-slideshow">
+<div class="background-slideshow">
         <div class="background-image image1"></div>
         <div class="background-image image2"></div>
         <div class="background-image image3"></div>
     </div>
 
-    <div class="mobile-images">
-        <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp" alt="Image 1">
-        <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp" alt="Image 2">
-        <img src="https://shedrackolisa.github.io/bmd-media/img/special.webp" alt="Image 3">
+    <div class="mobile-backgrounds">
+        <div class="mobile-image image1"></div>
+        <div class="mobile-image image2"></div>
+        <div class="mobile-image image3"></div>
     </div>
     
 
     <style>
-        body, html {
+
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -41,7 +42,7 @@
 .background-image {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -52,16 +53,18 @@
 .image2 { background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp'); }
 .image3 { background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp'); }
 
-.mobile-images {
+.mobile-backgrounds {
     display: none;
+    height: 100vh;
+    width: 100%;
     text-align: center;
-    padding: 20px;
 }
 
-.mobile-images img {
+.mobile-image {
     width: 100%;
-    max-width: 300px;
-    margin: 10px 0;
+    height: 33.33vh;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 768px) {
@@ -69,10 +72,12 @@
         display: none;
     }
 
-    .mobile-images {
+    .mobile-backgrounds {
         display: block;
     }
 }
+
+
 
     </style>
     <script>
@@ -86,6 +91,7 @@ function showNextImage() {
 }
 
 setInterval(showNextImage, 5000);
+
 
     </script>
 </body>
