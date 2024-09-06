@@ -15,48 +15,55 @@
         .background-container {
             width: 100%;
             height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         /* Desktop Slideshow Background Style */
         @media only screen and (min-width: 769px) {
             .background-container {
-                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+                background-image: url('image1-desktop.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 transition: background-image 1s ease-in-out;
             }
         }
 
         /* Mobile Static Background Styles */
         @media only screen and (max-width: 768px) {
-            /* Section 1 on mobile */
-            .background-container.section1 {
+            .background-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Each section on mobile with specified height and background */
+            .background-section {
+                width: 100%;
+                height: 33.33vh;
+                background-size: cover;
+                background-position: center;
+            }
+
+            /* Background images for mobile sections */
+            .background-section.section1 {
                 background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
             }
-            /* Section 2 on mobile */
-            .background-container.section2 {
+
+            .background-section.section2 {
                 background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
             }
-            /* Section 3 on mobile */
-            .background-container.section3 {
+
+            .background-section.section3 {
                 background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
             }
         }
     </style>
 </head>
 <body>
-    <!-- Different sections with separate backgrounds for mobile -->
-    <div class="background-container section1">
-        <!-- Content for section 1 -->
-    </div>
-
-    <div class="background-container section2">
-        <!-- Content for section 2 -->
-    </div>
-
-    <div class="background-container section3">
-        <!-- Content for section 3 -->
+    <div class="background-container">
+        <!-- Different sections with separate backgrounds for mobile -->
+        <div class="background-section section1"></div>
+        <div class="background-section section2"></div>
+        <div class="background-section section3"></div>
     </div>
 
     <script>
