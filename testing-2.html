@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Transition</title>
+    <style>
+
+body {
+            margin: 0;
+            padding: 0;
+        }
+        /* Desktop Background Style */
+        .background-container {
+            width: 100%;
+            height: 100vh;
+            background-image: url('image1-desktop.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1s ease-in-out;
+        }
+
+        /* Mobile Background Style */
+        @media only screen and (max-width: 768px) {
+            .background-container {
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+            }
+        }
+
+        /* Your existing CSS rules here */
+        .background-container {
+            /* Add any other styling you need */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <!-- Your content goes here -->
+    </div>
+
+    <script>
+        // Desktop Background Images Array
+        const desktopImages = [
+            'https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp',
+            'https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp',
+            'https://shedrackolisa.github.io/bmd-media/img/special.webp'
+        ];
+
+        // Mobile Background Images Array
+        const mobileImages = [
+        'https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp',
+            'https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp',
+            'https://shedrackolisa.github.io/bmd-media/img/special.webp'
+        ];
+
+        let currentIndex = 0;
+
+        // Function to Change Background Images
+        function changeBackground() {
+            const screenWidth = window.innerWidth;
+            const backgroundContainer = document.querySelector('.background-container');
+
+            if (screenWidth > 768) {
+                backgroundContainer.style.backgroundImage = `url(${desktopImages[currentIndex]})`;
+            } else {
+                backgroundContainer.style.backgroundImage = `url(${mobileImages[currentIndex]})`;
+            }
+
+            currentIndex = (currentIndex + 1) % desktopImages.length;
+        }
+
+        // Set interval to change the background every 5 seconds
+        setInterval(changeBackground, 5000);
+
+        // Initial background setup
+        changeBackground();
+    </script>
+</body>
+</html>
