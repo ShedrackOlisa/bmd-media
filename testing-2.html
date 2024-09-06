@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Image Transition</title>
     <style>
-
-body {
+        /* Reset body margin and padding */
+        body {
             margin: 0;
             padding: 0;
         }
-        /* Desktop Background Style */
+
+        /* Ensure the background container covers the full viewport */
         .background-container {
             width: 100%;
             height: 100vh;
-            background-image: url('image1-desktop.jpg');
+            background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             transition: background-image 1s ease-in-out;
         }
 
-        /* Mobile Background Style */
+        /* Mobile Background Style - 3 separate backgrounds for mobile */
         @media only screen and (max-width: 768px) {
             .background-container {
-                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp'); /* Default background for mobile */
+            }
+        }
+
+        /* Background for screen width between 768px and 576px */
+        @media only screen and (max-width: 576px) {
+            .background-container {
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
+            }
+        }
+
+        /* Background for screen width below 576px */
+        @media only screen and (max-width: 400px) {
+            .background-container {
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
             }
         }
 
@@ -47,30 +62,21 @@ body {
             'https://shedrackolisa.github.io/bmd-media/img/special.webp'
         ];
 
-        // Mobile Background Images Array
-        const mobileImages = [
-        'https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp',
-            'https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp',
-            'https://shedrackolisa.github.io/bmd-media/img/special.webp'
-        ];
-
         let currentIndex = 0;
 
-        // Function to Change Background Images
+        // Function to Change Background Images for Desktop
         function changeBackground() {
             const screenWidth = window.innerWidth;
             const backgroundContainer = document.querySelector('.background-container');
 
+            // Only change the background for desktop
             if (screenWidth > 768) {
                 backgroundContainer.style.backgroundImage = `url(${desktopImages[currentIndex]})`;
-            } else {
-                backgroundContainer.style.backgroundImage = `url(${mobileImages[currentIndex]})`;
+                currentIndex = (currentIndex + 1) % desktopImages.length;
             }
-
-            currentIndex = (currentIndex + 1) % desktopImages.length;
         }
 
-        // Set interval to change the background every 5 seconds
+        // Set interval to change the background every 5 seconds for desktop only
         setInterval(changeBackground, 5000);
 
         // Initial background setup
