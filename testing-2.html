@@ -11,47 +11,52 @@
             padding: 0;
         }
 
-        /* Ensure the background container covers the full viewport */
+        /* General background container styling */
         .background-container {
             width: 100%;
             height: 100vh;
-            background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: background-image 1s ease-in-out;
         }
 
-        /* Mobile Background Style - 3 separate backgrounds for mobile */
-        @media only screen and (max-width: 768px) {
+        /* Desktop Slideshow Background Style */
+        @media only screen and (min-width: 769px) {
             .background-container {
-                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp'); /* Default background for mobile */
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+                transition: background-image 1s ease-in-out;
             }
         }
 
-        /* Background for screen width between 768px and 576px */
-        @media only screen and (max-width: 576px) {
-            .background-container {
+        /* Mobile Static Background Styles */
+        @media only screen and (max-width: 768px) {
+            /* Section 1 on mobile */
+            .background-container.section1 {
+                background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+            }
+            /* Section 2 on mobile */
+            .background-container.section2 {
                 background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
             }
-        }
-
-        /* Background for screen width below 576px */
-        @media only screen and (max-width: 400px) {
-            .background-container {
+            /* Section 3 on mobile */
+            .background-container.section3 {
                 background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
             }
-        }
-
-        /* Your existing CSS rules here */
-        .background-container {
-            /* Add any other styling you need */
         }
     </style>
 </head>
 <body>
-    <div class="background-container">
-        <!-- Your content goes here -->
+    <!-- Different sections with separate backgrounds for mobile -->
+    <div class="background-container section1">
+        <!-- Content for section 1 -->
+    </div>
+
+    <div class="background-container section2">
+        <!-- Content for section 2 -->
+    </div>
+
+    <div class="background-container section3">
+        <!-- Content for section 3 -->
     </div>
 
     <script>
@@ -70,7 +75,7 @@
             const backgroundContainer = document.querySelector('.background-container');
 
             // Only change the background for desktop
-            if (screenWidth > 768) {
+            if (screenWidth >= 769) {
                 backgroundContainer.style.backgroundImage = `url(${desktopImages[currentIndex]})`;
                 currentIndex = (currentIndex + 1) % desktopImages.length;
             }
