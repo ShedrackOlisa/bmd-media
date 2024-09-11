@@ -1,141 +1,205 @@
+
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Affordable and professional web design">
-  <meta name="keywords" content="web design, affordable web design, professional web design">
-  <meta name="author" content="Brad Traversy">
-  <title>BMD MEDIA | Welcome</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="img/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affordable and professional web design">
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>BMD MEDIA | Welcome</title>
+    <link rel="stylesheet" href="./css/bmd.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
     <header id="showcase">
-      <div class="container">
-        
-        <nav>
-            <div class="name-bg"><span class="highlight">BMD</span> MEDIA</div>
-          <div class="menu-icon">
-            <i class="fas fa-bars"> Menu</i>
-          </div>
-          <ul class="menu">
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">Privacy</a></li>
-            <li><a href="services.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+  <div class="container">
+    <div class="logo">
+      <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-logo.webp" alt="Logo">
+    </div>
+    
+    <div class="hamburger" id="hamburger-icon" onclick="toggleMenu()">☰</div>
+    
+    <nav id="mobile-menu">
+      <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">Privacy</a></li>
+        <li><a href="services.html">Contact</a></li>
+      </ul>
+      <div class="close-btn" onclick="toggleMenu()">X</div>
+    </nav>
 
-      <!-- <div class="fixed">
-        <h1><span class="highlight">BMD</span> MEDIA</h1>
-        <button>BMD BOSSMANDOSKY</button>
-      </div> -->
-      <div class="fixed">
-      <button>BMD BOSSMANDOSKY</button>
-      </div>
-    </header>
+    <nav id="desktop-menu">
+      <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">Privacy</a></li>
+        <li><a href="services.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+  <button style="top: 400px; width: 170px; height: 35px; border-radius: 10px; border: none; background-color:#e8491d; color: #fff; font-weight: bolder;">RATE CARD</button>
+</header>
+
+    
   
+    
+  
+  
+    
+    
+    
+    
+    <br><br><br><br>
 
-  <section id="newsletter">
-    <div class="container">
-      <h1>Subscribe To Our Newsletter</h1>
-      <form>
-        <input type="email" placeholder="Enter Email..." required>
-        <button type="submit" class="button_1">Subscribe</button>
-      </form>
-    </div>
-  </section>
+    <div class="background-container"><div class="hide-rate-card-on-mobile"><br><br><br><br><br><br><br><br><br><br><br><br></div>
+      
+      
+      <div style="display: flex; justify-content: space-between; top: 50px; width: 80%; margin: auto; overflow: hidden; color: #e8491d; text-align: center;">
+        <div class="hide-rate-card-on-mobile" style="font-size: 25px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">CLIENTS</div>
+        <div class="hide-rate-card-on-mobile" style="font-size: 25px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+          <span style="visibility: hidden;">---------</span>WHAT WE ARE
+        </div>
+        <div class="hide-rate-card-on-mobile" style="font-size: 25px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">RATE CARD</div>
 
-  <section id="boxes">
-    <div class="container">
-      <div class="box">
-        <img src="./img/bmd-img-16.webp">
       </div>
-      <div class="box">
-        <img src="./img/bmd-img-17.webp">
+      
+      <div style="display: flex; justify-content: space-between; top: 50px; width: 80%; margin: auto; overflow: hidden; color: #fff; text-align: center;">
+        <div class="hide-rate-card-on-mobile" style="font-size: 15px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Explore our stories</div>
+        <div class="hide-rate-card-on-mobile" style="font-size: 15px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Get to know us better</div>
+        <div class="hide-rate-card-on-mobile" style="font-size: 15px; font-weight: bolder; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Our packages</div>
       </div>
-      <div class="box">
-        <img src="./img/bmd-img-18.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-19.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-20.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-21.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-22.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-23.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-24.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-25.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-14.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-15.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-12.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img-13.webp">
-      </div>
-      <div class="box">
-        <img src="./img/bmd-img.webp">
-      </div>
-    </div>
-  </section>
+      
+      
+      <!-- Different sections with separate backgrounds for mobile -->
+      <div class="background-section section1"></div>
+      <div class="background-section section2"></div>
+      <div class="background-section section3"></div>
+  </div><br><br><br><br>
 
+
+    <div class="image-grid">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-16.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-17.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-18.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-19.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-20.webp" alt="Image 5" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-21.webp" alt="Image 6" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-22.webp" alt="Image 7" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-23.webp" alt="Image 8" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-24.webp" alt="Image 1" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-25.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-26.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-27.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-28.webp" alt="Image 5" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-29.webp" alt="Image 6" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-30.webp" alt="Image 7" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-31.webp" alt="Image 8" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-32.webp" alt="Image 1" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-33.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/special.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-35.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp" alt="Image 5" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-37.webp" alt="Image 6" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-39.webp" alt="Image 7" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Image 8" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-41.webp" alt="Image 1" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-42.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-43.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-44.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-45.webp" alt="Image 5" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp" alt="Image 6" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-47.webp" alt="Image 7" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-48.webp" alt="Image 8" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-49.webp" alt="Image 1" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-50.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-51.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-52.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-52.webp" alt="Image 5" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-53.webp" alt="Image 6" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-54.webp" alt="Image 7" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-55.webp" alt="Image 8" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-56.webp" alt="Image 1" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-57.webp" alt="Image 2" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-58.webp" alt="Image 3" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-59.webp" alt="Image 4" loading="eager" class="image">
+<img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-60.webp" alt="Image 5" loading="eager" class="image">
+
+  </div>
+    
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h3>Navigation Menu</h3>
-        <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">Privacy</a></li>
-          <li><a href="services.html">Contact</a></li>
-        </ul>
-      </div>
+      <h3>Navigation Menu</h3>
+      <ul>
+      <li class="current"><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">Privacy</a></li>
+              <li><a href="services.html">Contact</a></li>
+      </ul>
+              </div>
       <div class="footer-section">
-        <h3>Follow Us</h3>
-        <ul class="social-icons">
-          <li><a href="https://www.facebook.com/profile.php?id=61550752782084"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://whatsapp.com/channel/0029Va9fPU89Bb5rps8okZ1A"><i class="fab fa-whatsapp"></i></a></li>
-          <li><a href="https://t.me/Olitechgames/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com/@Olitechgames"><i class="fab fa-pinterest"></i></a></li>
-        </ul>
-      </div>
-    </div>
+      <h3>Follow Us</h3>
+      <ul class="social-icons">
+      <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+       <li><a href="http://api.whatsapp.com/send?phone=2347051848117" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://www.instagram.com/bossmandosky?igsh=MmNmd3YzYWY2aXBj" target="_blank"><i class="fab fa-instagram"></i></a></li>
+         <li><a href="https://pin.it/23gIVfjb6" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+         <li><a href="#" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+          </ul>
+              </div>
+          </div>
+
     <div class="cy">
-      <p>BMD Media &copy; 2024 - <span id="yearPlaceholder"></span> All Rights Reserved</p>
+        <p>BMD Media &copy; 2024 - <span id="yearPlaceholder"></span> All Rights Reserved</p>
     </div>
+
+
 
     <script>
-      <!--Get the current year-->
-      var currentYear = new Date().getFullYear();
+        <!--Get the current year-->
+        var currentYear = new Date().getFullYear();
 
-      <!-- Update the year in the footer-->
-      document.getElementById("yearPlaceholder").textContent = currentYear;
+        <!-- Update the year in the footer-->
+                document.getElementById("yearPlaceholder").textContent = currentYear;
     </script>
-  </footer>
+   
+</footer>
 
-  <script src="script.js"></script> 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.image');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('image-loaded');
+        // Optionally, stop observing once the image is loaded
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1 // Adjust this value as needed
+  });
+
+  images.forEach(image => {
+    observer.observe(image);
+  });
+});
+</script>
+    <script src="bmd.js"></script> 
+
+	 
 </body>
 </html>
