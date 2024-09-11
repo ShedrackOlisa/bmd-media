@@ -1,40 +1,540 @@
-// Desktop Background Images Array
-const desktopImages = [
-  'https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp',
-  'https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp',
-  'https://shedrackolisa.github.io/bmd-media/img/special.webp'
-];
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
 
-let currentIndex = 0;
+/* Global */
+.container{
+  width:98%;
+  margin:auto;
+  overflow:hidden;
+}
 
-// Function to Change Background Images for Desktop
-function changeBackground() {
-  const screenWidth = window.innerWidth;
-  const backgroundContainer = document.querySelector('.background-container');
+ul{
+  margin:0;
+  padding:0;
+}
 
-  // Only change the background for desktop
-  if (screenWidth >= 769) {
-      backgroundContainer.style.backgroundImage = `url(${desktopImages[currentIndex]})`;
-      currentIndex = (currentIndex + 1) % desktopImages.length;
+.button_1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 15px;
+  padding-right:15px;
+  color:#ffffff;
+  border-radius:5px;
+  width: 70%;
+  top:300px;
+}
+
+
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#e8491d 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:10px;
+  top: -15px;
+  display: flex;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+  
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+  top:100px;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase {
+  position: relative;
+  min-height: 100px;
+  background: url('https://shedrackolisa.github.io/bmd-media/img/special.webp') no-repeat center center/cover;
+  text-align: center;
+  color: #ffffff;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+#showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust this value to control the darkness */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+#showcase * {
+  position: relative;
+  z-index: 2; /* Ensure that content within #showcase is above the overlay */
+}
+
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Newsletter */
+#newsletter{
+  padding:15px;
+  color:#ffffff;
+  background:#35424a
+}
+
+#newsletter h1{
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:2px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:0;
+}
+
+#boxes .box img{
+  width:95%;
+}
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#e8491d;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
   }
 }
 
-// Set interval to change the background every 5 seconds for desktop only
-setInterval(changeBackground, 5000);
 
-// Initial background setup
-changeBackground();
-
+header ul li{
+    font-weight:bold;
+}
 
 
 
+ul li:hover{
+    font-weight:bolder;
+    color: blue;
+}
 
 
 
-function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('show');
 
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  hamburgerIcon.textContent = hamburgerIcon.textContent === "☰" ? "X" : "☰";
+
+
+
+
+
+
+
+
+
+
+
+footer { background-color: #35424a; color: #fff; padding: 20px 0; text-align: center; font-weight:bolder; border-top:3px solid #e8491d}
+.footer-container { display: flex; justify-content: space-around;}
+.footer-section { flex: 1;}
+.footer-section h3 { margin-bottom: 10px;}
+.footer-section ul { list-style: none; padding: 0;}
+.footer-section ul li { margin-bottom: 5px;}
+.footer-section ul li a { color: #fff; text-decoration: none; transition: color 0.3s ease;}
+.footer-section ul li a:hover { color: #ccc;}
+.social-icons { list-style: none; padding: 0;}
+.social-icons li { display: inline-block; margin-right: 10px;}
+.social-icons li:last-child { margin-right: 0;}
+.social-icons li a { color: #fff; text-decoration: none; font-size: 24px; transition: color 0.3s ease;}
+.social-icons li a:hover { color: #ccc;}
+
+
+
+
+.name-bg{
+    top:300px;
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.image-grid {
+  column-count: 4; /* 4 columns for desktop */
+  column-gap: 1px; /* Space between columns */
+  width: 93%;
+margin:auto;
+overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .image-grid {
+  column-count: 4; /* 4 columns for desktop */
+  column-gap: 1px; /* Space between columns */
+  width: 80%;
+margin:auto;
+overflow: hidden;
+}
+}
+
+.image-grid img {
+  width: 100%;
+  margin-bottom: 1px; /* Space between images vertically */
+  break-inside: avoid; /* Prevent breaking images across columns */
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+      column-count: 1; /* 1 column for mobile */
+  }
+}
+
+
+
+
+.image {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.image-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
+/* General background container styling */
+.background-container {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Desktop Slideshow Background Style */
+@media only screen and (min-width: 769px) {
+  .background-container {
+      background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 3s ease-in-out;
+  }
+}
+
+/* Mobile Static Background Styles */
+@media only screen and (max-width: 768px) {
+  .background-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* Each section on mobile with specified height and background */
+  .background-section {
+      width: 100%;
+      height: 33.33vh;
+      background-size: cover;
+      background-position: center;
+  }
+
+  /* Background images for mobile sections */
+  .background-section.section1 {
+      background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-36.webp');
+  }
+
+  .background-section.section2 {
+      background-image: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-46.webp');
+  }
+
+  .background-section.section3 {
+      background-image: url('https://shedrackolisa.github.io/bmd-media/img/special.webp');
+  }
+}
+
+
+
+.bmd img{
+  float: left;
+}
+
+
+
+@media (max-width: 768px) {
+  .mm{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles for the header */
+header {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  max-width: 150px;
+}
+
+/* Desktop navigation menu */
+#desktop-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#desktop-menu ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#desktop-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+/* Mobile hamburger menu (visible only on mobile) */
+.hamburger {
+  font-size: 20px;
+  color: #ffffff;
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile menu (hidden initially) */
+#mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #35424a;
+  z-index: 9999; /* Ensure the menu is on top */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Close button inside mobile menu */
+.close-btn {
+  position: absolute;
+  top: -420px;
+  right: -170px;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Hamburger menu */
+.hamburger {
+  font-size: 20px;
+  color: #ffffff;
+  display: none;
+  cursor: pointer;
+  z-index: 10000; /* Ensure hamburger icon is above background */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #desktop-menu {
+    display: none;
+  }
+
+  #mobile-menu.show {
+    display: flex;
+    z-index: 9999;
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .hide-rate-card-on-mobile {
+    display: none;
+  }
 }
