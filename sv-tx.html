@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Screen Demarcation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header id="showcase">
+    <nav>
+        <div class="logo">
+            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-logo.webp" alt="ROM Hub Logo">
+        </div>
+        <ul class="nav-links">
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">Privacy</a></li>
+          <li><a href="services.html">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+<div class="overlay" id="overlay">
+    <div class="close-btn" id="close-btn">X</div>
+    <ul>
+      <li class="current"><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">Privacy</a></li>
+      <li><a href="services.html">Contact</a></li>
+    </ul>
+</div>
+
+
+    <style>
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 13px/1.7 Arial, Helvetica, sans-serif;
+            padding: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demarcation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .demarcation .text {
+            flex: 1;
+            padding-right: 40px; /* Creates space between text and image */
+        }
+
+        .demarcation .image {
+            flex: 1;
+            padding-left: 40px; /* Creates space between image and text */
+            text-align: right;
+        }
+
+        .demarcation img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .reverse .text {
+            padding-left: 40px;
+            padding-right: 0;
+        }
+
+        .reverse .image {
+            padding-left: 0;
+            padding-right: 40px;
+        }
+
+        /* Media query to disable demarcation layout on mobile */
+        @media (max-width: 768px) {
+            .demarcation {
+                flex-direction: column;
+                 /* Center align text for mobile */
+
+
+         
+            }
+            
+
+            .container {
+           margin: 0px;
+           padding: 10px;
+        }
+
+            .demarcation .text, 
+            .demarcation .image {
+                flex: none; /* Remove flex behavior */
+                padding: 0;
+                margin-bottom: 20px;
+            }
+
+            .reverse {
+                flex-direction: column; /* Stack text and image vertically on mobile */
+            }
+
+            .reverse .text, 
+            .reverse .image {
+                padding: 0;
+            }
+        }
+
+
+
+
+
+header {
+   
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom:#e8491d 3px solid;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: auto;
+    width: 160px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay ul li {
+    margin: 20px 0;
+}
+
+.overlay ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide on mobile */
+    }
+    .hamburger-menu {
+        display: flex; /* Show on mobile */
+    }
+}
+
+
+
+
+
+
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Hamburger Menu */
+
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+
+
+#showcase {
+  position: relative;
+  min-height: 100px;
+  background: url('https://shedrackolisa.github.io/bmd-media/img/bmd-img-37.webp') no-repeat center center/cover;
+  text-align: center;
+  color: #ffffff;
+  height: 70vh;
+  background-position: 50% 50%;
+}
+
+
+
+
+
+.footer {
+  background-color: #35424a;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          border-top:#e8491d 3px solid;
+      }
+      .footer-links {
+          margin-bottom: 20px;
+      }
+      .footer-links a {
+          color: #ddd;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .footer-links a:hover {
+          color: #fff;
+          font-weight: bolder;
+      }
+      .social-icons {
+          margin-bottom: 20px;
+      }
+      .social-icons a {
+          margin: 0 10px;
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+      }
+      .social-icons a:hover {
+          color: #ddd;
+      }
+      .copyright {
+          margin-bottom: 20px;
+          font-size: 14px;
+          border-top: 1px solid #fff;
+      }
+      .back-to-top img {
+          width: 180px; /* Adjust size as needed */
+          height: auto;
+      }
+      .back-to-top {
+          display: inline-block;
+          text-decoration: none;
+          margin-top: 20px;
+      }
+    </style>
+  <div class="container">
+    <!-- First Section: Image on right, Text on left -->
+    <div class="demarcation">
+     
+    <!-- Second Section: Image on left, Text on right -->
+    <div class="demarcation reverse">
+      <div class="image">
+        <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-logo.webp" alt="Our Work Image" width="90%">
+      </div>
+      <div class="text">
+        <h2>Our Work</h2>
+        At Jema Studio, we believe that growth is not merely an expansion but an intricate process of evolution, refining the art of progress through minute yet significant adjustments and unwavering consistency. It is with immense pride and gratitude that we introduce you to the exceptional individuals who have led our creative endeavors throughout the years, shaping the heart and soul of Jema Studio as we know it today. As our Creative Directors, these remarkable individuals have braved the pressures and challenges that come with managing a diverse range of projects and events while maintaining the high standards of creativity and innovation that we cherish at Jema Studio.</div>
+    </div>
+  </div>
+
+
+  <div class="container"></div>
+    <!-- First Section: Image on right, Text on left -->
+    <div class="demarcation">
+     
+    <!-- Second Section: Image on left, Text on right -->
+    <div class="demarcation reverse">
+      <div class="image" style="text-align: center;">
+        <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-32.webp" alt="Our Work Image" width="250px" style="border-radius: 100px;">
+        <img src="https://shedrackolisa.github.io/bmd-media/img/boss.webp" alt="Our Work Image" width="250px" style="border-radius: 100px;">
+        </div>
+      <div class="text">
+        <h2>Our Work</h2>
+        At Jema Studio, we believe that growth is not merely an expansion but an intricate process of evolution, refining the art of progress through minute yet significant adjustments and unwavering consistency. It is with immense pride and gratitude that we introduce you to the exceptional individuals who have led our creative endeavors throughout the years, shaping the heart and soul of Jema Studio as we know it today. As our Creative Directors, these remarkable individuals have braved the pressures and challenges that come with managing a diverse range of projects and events while maintaining the high standards of creativity and innovation that we cherish at Jema Studio.</div>
+    </div>
+  </div>
+
+
+
+  <div class="container"></div>
+    <!-- First Section: Image on right, Text on left -->
+    <div class="demarcation">
+     
+    <!-- Second Section: Image on left, Text on right -->
+    <div class="demarcation reverse">
+      <div class="image" style="text-align: center;">
+        <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-32.webp" alt="Our Work Image" width="250px" style="border-radius: 100px;">
+        <img src="https://shedrackolisa.github.io/bmd-media/img/boss.webp" alt="Our Work Image" width="250px" style="border-radius: 100px;">
+        </div>
+      <div class="text">
+        <h2>Our Work</h2>
+        At Jema Studio, we believe that growth is not merely an expansion but an intricate process of evolution, refining the art of progress through minute yet significant adjustments and unwavering consistency. It is with immense pride and gratitude that we introduce you to the exceptional individuals who have led our creative endeavors throughout the years, shaping the heart and soul of Jema Studio as we know it today. As our Creative Directors, these remarkable individuals have braved the pressures and challenges that come with managing a diverse range of projects and events while maintaining the high standards of creativity and innovation that we cherish at Jema Studio.</div>
+    </div>
+  </div>
+
+  </div>
+  
+
+  <footer class="footer">
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">Apps</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="social-icons">
+        <h3 style="color: #fff;">Follow Us</h3>
+        <a href="https://www.facebook.com/profile.php?id=61550752782084" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://whatsapp.com/channel/0029Va9fPU89Bb5rps8okZ1A" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/@Olitechgames" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/olisashedi?igsh=MXBma3Z3dGtldHo5aQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@olisaozor?_t=8pwiYqMriq5&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://t.me/ziphyweb/" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+    <div class="copyright"><br>
+      ZiphyTech  © Copyright 2024, All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script src="games.js"></script>
+
+
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+});
+
+
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('nav').classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>
