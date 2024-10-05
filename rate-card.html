@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Professional Photo Studio</title>
+    <title>Rate Card - Professional Photo Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Futura&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
+   </head>
 <body>
     <header id="showcase">
         <nav>
@@ -18,7 +17,7 @@
             <ul class="nav-links">
               <li class="current"><a href="index.html">Home</a></li>
               <li><a href="index.html">About</a></li>
-              <li><a href="services.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Services</a></li>
+              <li><a href="services.html">Services</a></li>
               <li><a href="#">Privacy</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -30,7 +29,7 @@
         </nav>
     
     <div class="rt" style="top: 250px; background: rgba(0, 0, 0, 0.5); width: 60%; margin: auto; overflow: hidden; border-radius: 50px;">
-        <h1 style="font-family: 'Lobster', cursive; color: #fff; font-size: 35px;"><span style="color: #e8491d;"> Our </span> Services</h1>
+        <h1 style="font-family: 'Lobster', cursive; color: #fff; font-size: 35px;"><span style="color: #e8491d;"> Our </span> Rate Card</h1>
          </div>
         
     </header>
@@ -39,51 +38,68 @@
         <ul>
           <li class="current"><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html" style="color: #e8491d; text-decoration: underline; font-weight: bold;">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="#">Privacy</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
    
-
-    
-    <div class="services-section">
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-35.webp" alt="Event Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Event Photography</h2>
-                <p>Our event photography service covers corporate events, weddings, birthdays, and more. We specialize in capturing candid moments that tell the story of your event beautifully.</p>
-            </div>
+    <div class="rate-card-section">
+        <div class="rate-package">
+            <h2>Basic Package</h2>
+            <ul>
+                <li>2 hours coverage</li>
+                <li>30 edited images</li>
+                <li>Online gallery</li>
+                <li>Starting at $500</li>
+            </ul>
         </div>
 
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Portrait Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Portrait Photography</h2>
-                <p>We create stunning portrait photography for individuals, families, and businesses. Whether in our studio or on location, we ensure you look your best.</p>
-            </div>
+        <div class="rate-package">
+            <h2>Advanced Package</h2>
+            <ul>
+                <li>4 hours coverage</li>
+                <li>60 edited images</li>
+                <li>Online gallery & 5 prints</li>
+                <li>Starting at $800</li>
+            </ul>
         </div>
 
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Product Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Product Photography</h2>
-                <p>Showcase your products with our professional product photography. Perfect for e-commerce, catalogs, and advertisements, we focus on lighting and detail to highlight your product's best features.</p>
-            </div>
+        <div class="rate-package">
+            <h2>Exclusive Package</h2>
+            <ul>
+                <li>6 hours coverage</li>
+                <li>100 edited images</li>
+                <li>Online gallery & 10 prints</li>
+                <li>Starting at $1200</li>
+            </ul>
         </div>
 
-        <div class="service">
-            <img src="https://shedrackolisa.github.io/bmd-media/img/bmd-img-40.webp" alt="Fashion Photography" class="service-photo">
-            <div class="service-info">
-                <h2>Fashion Photography</h2>
-                <p>We offer high-end fashion photography services for brands, designers, and magazines. Our creative approach ensures your fashion story is told through captivating visuals.</p>
-            </div>
+        <div class="rate-package">
+            <h2>Premium Package</h2>
+            <ul>
+                <li>Full-day coverage</li>
+                <li>Unlimited edited images</li>
+                <li>Custom photo album</li>
+                <li>Starting at $2000</li>
+            </ul>
         </div>
     </div>
 
+    <div class="add-ons-section">
+        <h2>Add-Ons</h2>
+        <ul>
+            <li>Second Photographer: $250</li>
+            <li>Videography: Starting at $500</li>
+            <li>Drone Coverage: $300</li>
+            <li>Same-day Slideshow: $200</li>
+            <li>Photo Booth: $400</li>
+        </ul>
+    </div>
+
     <div class="consultation-section">
-        <h2>Consultation & Planning</h2>
-        <p>We offer personalized consultations to ensure your photography session is tailored to your specific needs. From pre-event planning to post-production services, we guide you every step of the way to create images you'll love.</p>
+        <h2>Consultation & Custom Packages</h2>
+        <p>We offer personalized consultations to create a package that fits your specific needs. Please reach out to discuss custom pricing and options.</p>
     </div>
 <style>
     body {
@@ -288,25 +304,27 @@ nav ul li a:hover {
   z-index: 2; /* Ensure that content within #showcase is above the overlay */
 }
 
-.services-hero {
+
+
+.rate-card-hero {
     text-align: center;
     padding: 50px 20px;
     background-color: #fff;
     border-bottom: 2px solid #ccc;
 }
 
-.services-hero h1 {
+.rate-card-hero h1 {
     font-family: 'Lobster', cursive;
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.services-hero p {
+.rate-card-hero p {
     font-size: 20px;
     color: #555;
 }
 
-.services-section {
+.rate-card-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -314,40 +332,60 @@ nav ul li a:hover {
     background-color: #f1f1f1;
 }
 
-.service {
-    display: flex;
-    align-items: center;
+.rate-package {
+    font:13px/1.5 Times New Roman, Times, serif;
+    background-color: #fff;
+    padding: 20px;
     margin-bottom: 30px;
-    max-width: 100%;
-}
-
-.service-photo {
     width: 300px;
-    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-right: 20px;
-    object-fit: cover;
 }
 
-.service-info {
-    max-width: 600px;
-}
-
-.service-info h2 {
+.rate-package h2 {
     font-family: 'Lobster', cursive;
     font-size: 32px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
-.service-info p {
-    font-size: 18px;
-    line-height: 1.6;
+.rate-package ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 16px;
     color: #333;
+}
+
+.rate-package ul li {
+    margin-bottom: 10px;
+}
+
+.add-ons-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.add-ons-section h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.add-ons-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.add-ons-section ul li {
+    margin-bottom: 10px;
 }
 
 .consultation-section {
     padding: 50px;
-   
+    text-align: center;
     background-color: #fff;
     border-top: 2px solid #ccc;
 }
@@ -356,45 +394,38 @@ nav ul li a:hover {
     font-family: 'Lobster', cursive;
     font-size: 36px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .consultation-section p {
-    font-size: 18px;
+    font-size: 14px;
     color: #555;
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    .services-section {
+    .rate-card-section {
         flex-direction: column;
     }
 
-    .service {
-        flex-direction: column;
-        text-align: center;
+    .rate-package {
+        margin: 0 auto 30px auto;
+        width: 100%;
+        max-width: 400px;
     }
 
-    .service-photo {
-        margin: 0 auto 20px auto;
-    }
-
-    .services-hero h1 {
+    .rate-card-hero h1 {
         font-size: 36px;
     }
 
-    .services-hero p {
+    .rate-card-hero p {
         font-size: 18px;
     }
 
-    .service-info p {
-text-align: left;
+    .add-ons-section h2, .consultation-section h2 {
+        font-size: 28px;
     }
+}
 
-    .consultation-section {
-        padding: 20px;
-}
-}
 
 .footer {
   background-color: #35424a;
@@ -445,6 +476,11 @@ text-align: left;
       }
 
 </style>
+
+
+
+
+
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-links">
