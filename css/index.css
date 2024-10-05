@@ -199,13 +199,8 @@ ul#services li{
   background:#e6e6e6;
 }
 
-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#ffffff;
-  background-color:#e8491d;
-  text-align: center;
-}
+
+
 
 /* Media Queries */
 @media(max-width: 768px){
@@ -256,110 +251,53 @@ ul li:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-footer {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 40px 0;
-  font-weight: bold;
-}
-
-.footer-top {
-  border-bottom: 1px solid #bdc3c7;
-  padding-bottom: 20px;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 250px;
-  padding: 0 20px;
-  margin-bottom: 20px;
-}
-
-.footer-section h3 {
-  margin-bottom: 20px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.footer-section p, .footer-section ul {
-  margin: 0;
-  padding: 0;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  color: #ecf0f1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #bdc3c7;
-}
-
-.social-icons {
-  list-style: none;
-  padding: 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.social-icons li:last-child {
-  margin-right: 0;
-}
-
-.social-icons li a {
-  color: #ecf0f1;
-  text-decoration: none;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-icons li a:hover {
-  color: #bdc3c7;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 14px;
-  text-align: center;
-}
-
-
-
-
-
-
+.footer {
+  background-color: #35424a;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          border-top:#e8491d 3px solid;
+      }
+      .footer-links {
+          margin-bottom: 20px;
+      }
+      .footer-links a {
+          color: #ddd;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .footer-links a:hover {
+          color: #fff;
+          font-weight: bolder;
+      }
+      .social-icons {
+          margin-bottom: 20px;
+      }
+      .social-icons a {
+          margin: 0 10px;
+          color: #fff;
+          font-size: 24px;
+          text-decoration: none;
+      }
+      .social-icons a:hover {
+          color: #ddd;
+      }
+      .copyright {
+          margin-bottom: 20px;
+          font-size: 14px;
+          border-top: 1px solid #fff;
+          font-weight: bold;
+      }
+      .back-to-top img {
+          width: 180px; /* Adjust size as needed */
+          height: auto;
+      }
+      .back-to-top {
+          display: inline-block;
+          text-decoration: none;
+          margin-top: 20px;
+      }
 
 
 .name-bg{
@@ -420,7 +358,8 @@ overflow: hidden;
 .image {
   opacity: 0;
   transform: scale(1.1);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 3s ease, transform 1s ease;
+  /* transition: opacity 0.6s ease, transform 0.6s ease; */
 }
 
 .image-loaded {
@@ -644,4 +583,22 @@ header {
 #mobile-menu a:hover{
   font-weight: bolder;
   text-decoration-line: underline;
+}
+
+
+
+
+
+
+
+.button-wrapper {
+  position: relative; /* Establishes a positioning context */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.button-wrapper button {
+  position: absolute;
+  top: 50%; /* Moves button to the middle vertically */
+  left: 50%; /* Moves button to the middle horizontally */
+  transform: translate(-50%, -50%); /* Centers the button */
 }
