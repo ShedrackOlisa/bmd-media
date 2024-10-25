@@ -31,9 +31,18 @@ changeBackground();
 
 
 
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('show');
 
-  hamburger.addEventListener('click', function() {
-    menu.classList.toggle('show');
-  });
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  hamburgerIcon.textContent = hamburgerIcon.textContent === "☰" ? "X" : "☰";
+}
+
+
+
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenu.classList.toggle('show');
+  document.body.classList.toggle('menu-open');
+}
