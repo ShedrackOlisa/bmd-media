@@ -80,11 +80,12 @@
                 <p>photographer/Editor</p>
             </div>
         </div>
-    </div>
+    </div><br><br>
 
     <div class="pricing-section">
-        <h2>Pricing</h2>
-        <p>In some cases, we offer services that prioritize the following:</p>
+        <div class="pricing-box">
+            <h2>Pricing</h2>
+            <p>In some cases, we offer services that prioritize the following:</p>
         <ul>
           <li>Documentary shoots</li>
           <li>Landscape photography</li>
@@ -92,7 +93,7 @@
           <li>Product photography</li>
         </ul>
   
-        <h3>3. Photography Packages</h3>
+        <h3>Photography Packages</h3>
         <p>We offer customizable packages to fit your needs, including:</p>
       <ul>
           <li>Basic (limited hours, edited images)</li>
@@ -102,7 +103,7 @@
   
   
   
-      <h3>4. Add-ons</h3>
+      <h3>Add-ons</h3>
       <p>Enhance your photography experience with our add-ons:</p>
       <ul>
           <li>Second photographer</li>
@@ -114,7 +115,7 @@
   
   
   
-      <h3>5. Post-Production</h3>
+      <h3>Post-Production</h3>
       <p>We provide expert editing and retouching services to ensure your images look their best:</p>
       <ul>
           <li>Basic editing (color correction, exposure)</li>
@@ -126,7 +127,7 @@
   
   
   
-      <h3>6. Print and Digital Services</h3>
+      <h3>Print and Digital Services</h3>
       <p>We offer a range of print and digital options:</p>
       <ul>
           <li>High-resolution digital images</li>
@@ -135,7 +136,7 @@
           <li>Digital image delivery</li>
       </ul>
       
-      <h3>7. Consultation and Planning</h3>
+      <h3>Consultation and Planning</h3>
       <p>We offer personalized consultation and planning to ensure your photography needs are met:</p>
       <ul>
           <li>Pre-event consultation</li>
@@ -149,11 +150,54 @@
         <li>Advanced</li>
         <li>Exclusive</li>
         <li>Premium</li>
-    </ul>
-  
 
-    </div>
+        <div class="sponsors">
+            <h3>Our cooperate client </h3>
+            <div class="sponsor-logos">
+                <img src="IMG-20240820-WA0002.jpg" alt="Sponsor 1 Logo">
+                <img src="ksmart logo.png" alt="Sponsor 2 Logo">
+                <img src="Nigerian-Breweries.jpg" alt="Sponsor 3 Logo">
+                <img src="webxiel logo.jpg" alt="Sponsor 4 Logo">
+            </div>
+        </div>
+    </ul>
+        </div>
+    </div><br><br>
+    
 <style>
+    .sponsors {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sponsors h3 {
+    font-size: 24px;
+    color: #e8491d;
+    margin-bottom: 15px;
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sponsor-logos img {
+    width: 120px; /* Adjust as needed */
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+    transform: scale(1.1);
+    border-color: #e8491d;
+}
+
+
    body {
     font-family: 'Futura', sans-serif;
         font: 14px/1.8 Futura, Helvetica, sans-serif;
@@ -299,6 +343,7 @@ font-weight: bolder;
     border-radius: 60px;
     object-fit: cover;
 }
+
 }
 
 
@@ -418,7 +463,7 @@ nav ul li a:hover {
 }
 
 .team-photo {
-    width: 200px;
+    width: 250px;
     height: auto;
     border-radius: 60px;
     object-fit: cover;
@@ -436,9 +481,48 @@ nav ul li a:hover {
 }
 
 .pricing-section {
-    padding: 50px;
-   background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #f4f4f4;
 }
+
+.pricing-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.pricing-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #e8491d;
+}
+
+.pricing-box ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-box ul li {
+    padding: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.pricing-box p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+
 
 .pricing-section h2 {
     /* font-family: 'Lobster', cursive; */
@@ -452,11 +536,9 @@ nav ul li a:hover {
     color: #333;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        
     }
 
     .story-section {
@@ -464,7 +546,7 @@ nav ul li a:hover {
         margin-top: 20px;
     }
 
-    .story-section h2{
+    .story-section h2 {
         text-align: center;
     }
 
@@ -485,23 +567,12 @@ nav ul li a:hover {
         padding: 30px;
     }
 
-    .story-section h2, .team-section h2, .pricing-section h2 {
-        font-size: 28px;
+    .pricing-box {
+        width: 95%; /* Set width to 95% on mobile */
+        margin: 0 auto; /* Center the box */
     }
-
-    .story-section p, .pricing-section p {
-        font-size: 16px;
-    }
-
-    .logo-section .studio-logo {
-    display: none;
 }
 
-.story-section p {
-    font-size: 14px;
-   
-}
-}
 
 .footer {
   background-color: #35424a;
